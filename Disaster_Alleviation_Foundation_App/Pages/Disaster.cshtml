@@ -1,0 +1,34 @@
+﻿@page
+@model Disaster_Alleviation_Foundation_App.Pages.DisasterModel
+
+<h1>Capture Disaster Information</h1>
+
+<form method="post">
+    <div>
+        <label for="StartDate">Start Date:</label>
+        <input asp-for="Disaster.StartDate" type="date" required />
+    </div>
+    <div>
+        <label for="EndDate">End Date:</label>
+        <input asp-for="Disaster.EndDate" type="date" required />
+    </div>
+    <div>
+        <label for="Location">Location:</label>
+        <input asp-for="Disaster.Location" required />
+    </div>
+    <div>
+        <label for="Description">Description:</label>
+        <textarea asp-for="Disaster.Description" required></textarea>
+    </div>
+    <div>
+        <label for="AidTypes">Required Aid Types:</label>
+        @foreach (var aidType in Model.AidTypes)
+        {
+            <input type="checkbox" asp-for="SelectedAidTypes" value="@aidType.Id" />
+            <label>@aidType.Name</label>
+            <br />
+        }
+    </div>
+
+    <button type="submit">Submit</button>
+</form>

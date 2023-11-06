@@ -1,0 +1,37 @@
+﻿@page
+@model Disaster_Alleviation_Foundation_App.Pages.GoodsDonationModel
+
+<h1>Capture Goods Donation</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Date">Date:</label>
+        <input type="date" id="Date" name="Date" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="NumberOfItems">Number of Items:</label>
+        <input type="number" id="NumberOfItems" name="NumberOfItems" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Category">Category:</label>
+        <select id="Category" name="Category" class="form-control" required>
+            <option value="Clothes">Clothes</option>
+            <option value="Non-perishable foods">Non-perishable foods</option>
+            <!-- You can add more categories here -->
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Description">Description:</label>
+        <textarea id="Description" name="Description" class="form-control" required></textarea>
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" id="IsAnonymous" name="IsAnonymous" class="form-check-input">
+        <label for="IsAnonymous" class="form-check-label">Remain Anonymous</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Donation</button>
+</form>

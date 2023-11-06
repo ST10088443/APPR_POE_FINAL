@@ -1,0 +1,30 @@
+﻿@page
+@model Disaster_Alleviation_Foundation_App.Pages.AllocateMoneyModel
+@{
+    ViewData["Title"] = "Allocate Money";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="AmountAllocated">Amount to Allocate:</label>
+        <input asp-for="AmountAllocated" class="form-control" />
+        <span asp-validation-for="AmountAllocated" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DisasterId">Select Active Disaster:</label>
+        <select asp-for="DisasterId" class="form-control">
+            <option value="">-- Select Disaster --</option>
+        </select>
+        <span asp-validation-for="DisasterId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdditionalInformation">Additional Information (optional):</label>
+        <input asp-for="AdditionalInformation" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Allocate</button>
+</form>

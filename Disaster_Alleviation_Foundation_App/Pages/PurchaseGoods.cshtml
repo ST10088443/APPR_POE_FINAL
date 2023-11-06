@@ -1,0 +1,32 @@
+﻿@page
+@model Disaster_Alleviation_Foundation_App.Pages.PurchaseGoodsModel
+@{
+}
+<form method="post">
+    <div class="form-group">
+        <label for="AmountSpent">Amount Spent:</label>
+        <input asp-for="Purchase.AmountSpent" class="form-control" />
+        <span asp-validation-for="Purchase.AmountSpent" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="GoodsCategoryId">Goods Category:</label>
+        <select asp-for="Purchase.GoodsCategoryId" asp-items="Model.GoodsCategories" class="form-control">
+            <option value="">Select a category</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="QuantityPurchased">Quantity Purchased:</label>
+        <input asp-for="Purchase.QuantityPurchased" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Description">Additional Details:</label>
+        <textarea asp-for="Purchase.Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="DisasterId">Select Disaster:</label>
+        <select asp-for="Purchase.DisasterId" asp-items="Model.ActiveDisasters" class="form-control">
+            <option value="">Select a disaster</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Purchase Goods</button>
+</form>

@@ -1,0 +1,35 @@
+﻿@page
+@model Disaster_Alleviation_Foundation_App.Pages.GoodsAllocationModel
+@{
+}
+<h2>Goods Allocation</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="NumberOfItems">Number of Items:</label>
+        <input asp-for="GoodsAllocation.NumberOfItems" class="form-control" />
+        <span asp-validation-for="GoodsAllocation.NumberOfItems" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Category">Category:</label>
+        <input asp-for="GoodsAllocation.Category" class="form-control" />
+        <span asp-validation-for="GoodsAllocation.Category" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Description">Description:</label>
+        <input asp-for="GoodsAllocation.Description" class="form-control" />
+        <span asp-validation-for="GoodsAllocation.Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="DisasterId">Select Active Disaster:</label>
+        <select asp-for="GoodsAllocation.DisasterId" asp-items="Model.ActiveDisasters">
+            <option value="">Select an active disaster</option>
+        </select>
+        <span asp-validation-for="GoodsAllocation.DisasterId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Allocate Goods</button>
+</form>
