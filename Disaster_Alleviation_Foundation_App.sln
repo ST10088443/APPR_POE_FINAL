@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Disaster_Alleviation_Foundation_App", "Disaster_Alleviation_Foundation_App\Disaster_Alleviation_Foundation_App.csproj", "{20941A15-C324-4700-A413-AF990554BDC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disaster_Alleviation_Foundation_App.Tests", "Disaster_Alleviation_Foundation_App.Tests\Disaster_Alleviation_Foundation_App.Tests.csproj", "{723A0EFC-0416-42B4-BAAB-36BC60D71E2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{20941A15-C324-4700-A413-AF990554BDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20941A15-C324-4700-A413-AF990554BDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20941A15-C324-4700-A413-AF990554BDC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{723A0EFC-0416-42B4-BAAB-36BC60D71E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723A0EFC-0416-42B4-BAAB-36BC60D71E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723A0EFC-0416-42B4-BAAB-36BC60D71E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723A0EFC-0416-42B4-BAAB-36BC60D71E2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
