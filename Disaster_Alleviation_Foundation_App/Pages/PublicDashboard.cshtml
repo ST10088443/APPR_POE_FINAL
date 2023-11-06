@@ -1,0 +1,26 @@
+﻿@page
+@model Disaster_Alleviation_Foundation_App.Models.PublicDashboardModel
+@{
+    <head>
+        <title>Public Dashboard</title>
+        <link rel="stylesheet" href="~/css/public-dashboard.css"> <!-- Link to my CSS file -->
+    </head>
+
+    <h1>Public Dashboard</h1>
+
+    <h2>Total Monetary Donations Received: @Model.TotalMonetaryDonations</h2>
+    <h2>Total Number of Goods Received: @Model.TotalGoodsReceived</h2>
+
+    <h2>Currently Active Disasters:</h2>
+    <ul>
+        @foreach (var disaster in Model.ActiveDisasters)
+        {
+            <li>
+                <h3>@disaster.Name</h3>
+                <p>Description: @disaster.Description</p>
+                <p>Start Date: @disaster.StartDate</p>
+                <p>End Date: @disaster.EndDate</p>
+            </li>
+        }
+    </ul>
+}

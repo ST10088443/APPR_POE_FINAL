@@ -1,0 +1,31 @@
+﻿body {
+}
+/* Style for headers */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+h2 {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Style for the total donation section */
+.total-donations {
+    margin-top: 20px;
+}
+
+/* Style for the list of active disasters */
+.active-disasters {
+    list-style: none;
+    padding: 0;
+}
+
+.active-disaster-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+}
+    
